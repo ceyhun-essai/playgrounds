@@ -1,0 +1,17 @@
+digraph {
+	node [shape=rect];
+    subgraph {
+        node [shape=ellipse];
+        home; mandel; uikit; Desktop; Downloads; denemeler; defterlerim;
+    }
+	home [label="$HOME"];
+	home->{Desktop,Downloads};
+	Desktop->denemeler->MyPlayground;
+    Desktop->defterlerim;
+    defterlerim->PlaygroundMarkup;
+	Downloads->{GuidedTour,DemoNewFormat,mandel,uikit};
+    mandel [label="Mandelbrot-Swift-Playground-master"];
+    uikit [label="uikit-playground-master"];
+	mandel->Mandelbrot;
+    uikit->{UILabel,UIButton};
+}
